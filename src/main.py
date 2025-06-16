@@ -3,6 +3,23 @@ import os
 
 def create_app():
     app = Flask(__name__, static_folder='static')
+   <!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>BinaMIX - المساعد الذكي للتداول</title>
+</head>
+<body>
+    <h1>مرحبًا بك في BinaMIX!</h1>
+    <p>نظام تداول ذكي يستخدم الذكاء الاصطناعي لتحليل الأسواق وتقديم التوصيات المالية.</p>
+    <ul>
+        <li>تحليل بيانات السوق بشكل مباشر</li>
+        <li>توصيات تداول مخصصة</li>
+        <li>تحليل مشاعر الأخبار المالية</li>
+        <li>تكامل مع منصة Binance</li>
+    </ul>
+</body>
+</html>
     from .auth import auth
 app.register_blueprint(auth, url_prefix='/auth')
     @app.route('/')
