@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المساعد الذكي الشخصي للتداول</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --info-color: #0dcaf0;
+            --warning-color: #ffc107;
+            --danger-color: #dc3545;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), #6610f2);
+            color: white;
+            padding: 60px 0;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 30px;
+        }
+        
+        .feature-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .card-header {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: bold;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #0b5ed7;
+            border-color: #0a58ca;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-chart-line me-2"></i>
+                المساعد الذكي الشخصي للتداول
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/profile">الملف الشخصي</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/market-data">بيانات السوق</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/recommendations">التوصيات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/sentiment">تحليل المشاعر</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold">المساعد الذكي الشخصي للتداول</h1>
+            <p class="lead">نظام ذكي يقدم توصيات استثمارية مخصصة بناءً على أهدافك ومستوى المخاطر وتفضيلاتك الشخصية</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-4">
+                <a href="/profile" class="btn btn-light btn-lg px-4 gap-3">ابدأ الآن</a>
+                <a href="#features" class="btn btn-outline-light btn-lg px-4">تعرف على المزيد</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container my-5" id="features">
+        <h2 class="text-center mb-5">المميزات الرئيسية</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card card">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-cog"></i>
+                        </div>
+                        <h5 class="card-title">ملف شخصي مخصص</h5>
+                        <p class="card-text">حدد أهدافك المالية، مستوى تحمل المخاطر، والتفضيلات الاستثمارية الخاصة بك.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card card">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h5 class="card-title">بيانات سوق حية</h5>
+                        <p class="card-text">اطلع على بيانات الأسهم والعملات المشفرة في الوقت الحقيقي لاتخاذ قرارات مستنيرة.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card card">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h5 class="card-title">توصيات ذكية</h5>
+                        <p class="card-text">احصل على توصيات استثمارية مخصصة بناءً على ملفك الشخصي وظروف السوق الحالية.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card card">
+                    <div class="card-body text-center p-4">
+                        <div class="feature-icon">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <h5 class="card-title">تحليل المشاعر</h5>
+                        <p class="card-text">تحليل مشاعر الأخبار المالية لفهم تأثيرها المحتمل على استثماراتك.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="container my-5">
+        <h2 class="text-center mb-5">كيف يعمل النظام</h2>
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="https://via.placeholder.com/600x400" alt="How it works" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-md-6">
+                <div class="accordion" id="howItWorksAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                1. إنشاء ملفك الشخصي
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#howItWorksAccordion">
+                            <div class="accordion-body">
+                                أخبرنا عن أهدافك المالية، مستوى تحمل المخاطر، والأسواق والقطاعات التي تفضلها. كلما زادت المعلومات التي تقدمها، كانت التوصيات أكثر دقة.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                2. تحليل بيانات السوق
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#howItWorksAccordion">
+                            <div class="accordion-body">
+                                يقوم النظام بجمع وتحليل بيانات السوق الحية من مصادر موثوقة، مع مراعاة الاتجاهات التاريخية والظروف الحالية.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                3. تحليل مشاعر الأخبار
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#howItWorksAccordion">
+                            <div class="accordion-body">
+                                يستخدم النظام تقنيات الذكاء الاصطناعي لتحليل مشاعر الأخبار المالية وتأثيرها المحتمل على الأصول التي تهتم بها.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                4. توليد توصيات مخصصة
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#howItWorksAccordion">
+                            <div class="accordion-body">
+                                بناءً على جميع هذه المعلومات، يقدم النظام توصيات استثمارية مخصصة تناسب ملفك الشخصي وظروف السوق الحالية.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="container my-5">
+        <div class="card text-center">
+            <div class="card-header bg-primary text-white">
+                ابدأ رحلتك الاستثمارية الذكية اليوم
+            </div>
+            <div class="card-body py-5">
+                <h5 class="card-title">جاهز للحصول على توصيات استثمارية مخصصة؟</h5>
+                <p class="card-text">أنشئ ملفك الشخصي الآن واكتشف قوة المساعد الذكي الشخصي للتداول.</p>
+                <a href="/profile" class="btn btn-primary btn-lg mt-3">إنشاء ملفك الشخصي</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>المساعد الذكي الشخصي للتداول</h5>
+                    <p>نظام ذكي يقدم توصيات استثمارية مخصصة بناءً على أهدافك ومستوى المخاطر وتفضيلاتك الشخصية.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>روابط سريعة</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="/" class="text-white">الرئيسية</a></li>
+                        <li><a href="/profile" class="text-white">الملف الشخصي</a></li>
+                        <li><a href="/market-data" class="text-white">بيانات السوق</a></li>
+                        <li><a href="/recommendations" class="text-white">التوصيات</a></li>
+                        <li><a href="/sentiment" class="text-white">تحليل المشاعر</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>تنويه قانوني</h5>
+                    <p class="small">المعلومات المقدمة هي لأغراض تعليمية فقط وليست نصيحة مالية. استشر مستشاراً مالياً مؤهلاً قبل اتخاذ أي قرارات استثمارية.</p>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="text-center">
+                <p>&copy; 2025 المساعد الذكي الشخصي للتداول. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
