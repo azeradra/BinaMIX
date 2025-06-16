@@ -3,7 +3,8 @@ import os
 
 def create_app():
     app = Flask(__name__, static_folder='static')
-    
+    from .auth import auth
+app.register_blueprint(auth, url_prefix='/auth')
     @app.route('/')
     def index():
         return send_from_directory(app.static_folder, 'index.html')
